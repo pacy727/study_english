@@ -25,7 +25,7 @@ const App = () => {
   })));
   const [currentFood, setCurrentFood] = useState(SWEET_ICONS[0]);
   const inputRef = useRef(null);
-  const [gameStartTime, setGameStartTime] = useState(null);
+//   const [gameStartTime, setGameStartTime] = useState(null);
 
   // タイマー
   useEffect(() => {
@@ -116,7 +116,7 @@ const App = () => {
     setFloatingIcons([]);
     setGameState('game');
     selectNewWord();
-    setGameStartTime(Date.now());
+    // setGameStartTime(Date.now());
     setTimeout(() => {
       if (inputRef.current) {
         inputRef.current.focus();

@@ -1,5 +1,5 @@
 import React from 'react';
-import { SUSHI_ICONS, SWEET_ICONS, CUTE_ICONS } from '../data/wordPairs';
+
 
 const BackgroundEffects = ({ bgBubbles }) => {
   return (
