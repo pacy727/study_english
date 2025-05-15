@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 英単語寿司打 (English Word Sushi Strike)
 
-## Getting Started
+楽しく英単語を学ぶタイピングゲーム！制限時間内に正しい訳語をタイプして、クッキーやお寿司をゲットしよう！
 
-First, run the development server:
+## 機能
+
+- 2つのモード：英語→日本語、日本語→英語
+- ポップでかわいいデザイン
+- 視覚的なスコア表示システム
+- 独創的なタイマー
+- 楽しいアニメーションエフェクト
+
+## 開発
+
+### インストール方法
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/yourusername/english-word-sushi-app.git
+cd english-word-sushi-app
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 開発サーバーの起動
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### ビルド
 
-## Learn More
+```bash
+npm run build
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Vercelへのデプロイ方法
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. [Vercel](https://vercel.com/)にアカウントを作成する
+2. GitHubなどのリポジトリにプロジェクトをプッシュする
+3. Vercelでリポジトリをインポートする
+4. 自動的にビルドとデプロイが行われます
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 単語の追加・変更
 
-## Deploy on Vercel
+`src/data/wordPairs.js`ファイルを編集することで、単語リストを自由に追加・変更できます。
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```javascript
+const wordPairs = [
+  { english: "新しい英単語", japanese: "日本語訳" },
+  // 追加の単語ペア
+];
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## カスタマイズ
+
+- アイコンの変更: `src/data/wordPairs.js`のアイコン配列を編集
+- スタイルの調整: Tailwind CSSのクラスを使って各コンポーネントのスタイルを変更
+- アニメーションの追加: `src/styles/animations.css`でアニメーションを追加・編集
+
+## ライセンス
+
+MIT
